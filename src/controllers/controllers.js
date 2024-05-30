@@ -69,16 +69,16 @@ const validateApiKey = (req, res) => {
 
 export const getProteins = (req, res) => {
     const apiKeyError = validateApiKey(req, res);
-    if (apiKeyError){
-        return apiKeyError;
-    }
+    if (apiKeyError) return apiKeyError;
+    
+    res.setHeader('Access-Control-Allow-Origin', '*'); 
     res.json(proteins);
 };
 
 export const getBroths = (req, res) => {
     const apiKeyError = validateApiKey(req, res);
     if (apiKeyError) return apiKeyError;
-
+    res.setHeader('Access-Control-Allow-Origin', '*'); 
     res.json(broths);
 };
 

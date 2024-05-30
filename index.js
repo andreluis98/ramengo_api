@@ -1,10 +1,8 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import routesRamengo from './src/routes/routes.js';
 
-dotenv.config();
 
 const app = express();
 const PORT = 5000;
