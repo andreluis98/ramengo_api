@@ -61,6 +61,7 @@ let broths = [
 
 const validateApiKey = (req, res) => {
     const apiKeyHeader = req.headers['x-api-key'];
+    
     if (!apiKeyHeader || apiKeyHeader !== apiKey) {
         return res.status(400).json({ error: "x-api-key header missing or invalid" });
     }
@@ -68,8 +69,9 @@ const validateApiKey = (req, res) => {
 
 export const getProteins = (req, res) => {
     const apiKeyError = validateApiKey(req, res);
-    if (apiKeyError) return apiKeyError;
-    
+    if (apiKeyError){
+        return apiKeyError;
+    }
     res.json(proteins);
 };
 

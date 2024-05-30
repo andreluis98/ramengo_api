@@ -82,8 +82,7 @@ O servidor iniciará em `http://localhost:5000`.
             "name": "Miso",
             "description": "Miso Soup",
             "price": 10
-        },
-        // outros caldos
+        }
     ]
     ```
 
