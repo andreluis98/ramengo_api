@@ -7,6 +7,11 @@ import routesRamengo from './src/routes/routes.js';
 const app = express();
 const PORT = 5000;
 
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  });
+
 app.use(cors());
 app.options('*', cors());
 
